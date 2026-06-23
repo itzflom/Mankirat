@@ -10,10 +10,8 @@ This is a static site — plain HTML, CSS, and JavaScript, no build step or depe
 
 1. Go to the repository on GitHub: **Settings → Pages**.
 2. Under "Build and deployment", set **Source** to "Deploy from a branch".
-3. Choose this branch (`claude/mankirat-revolution-site-kca4p1`, or `main` once merged) and the
-   `/ (root)` folder, then save.
-4. GitHub will publish the site at `https://<your-username>.github.io/<repo-name>/` within a
-   minute or two.
+3. Choose branch `claude/mankirat-revolution-site-kca4p1` and the `/ (root)` folder, then save.
+4. GitHub will publish the site at `https://itzflom.github.io/Mankirat/` within a minute or two.
 
 ## Running it locally
 
@@ -34,14 +32,5 @@ skills). Submitting it sends the application straight to an inbox via
 ### Where submissions go
 
 Web3Forms is just a delivery relay, not a separate place you need to check — submissions
-arrive as normal emails in the inbox tied to the access key (configured in `script.js`).
-By default, a Web3Forms access key only delivers to the single email address it was created
-with. To make sure applications reach **both** `27singhk@bsj.sch.id` and
-`eshan030709@gmail.com`:
-
-1. Log into the [Web3Forms dashboard](https://web3forms.com/login) (passwordless magic-link
-   login, using whichever email the access key was created with).
-2. Open the form associated with this access key.
-3. Add the second address as an **Additional Email** / CC recipient on that form.
-
-If this step isn't done, submissions will only land in the one inbox the key was created for.
+arrive as normal emails in `eshan030709@gmail.com`, the inbox tied to the access key
+configured in `script.js`. No further setup is required.
