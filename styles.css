@@ -349,40 +349,7 @@ a {
   font-size: 0.95rem;
 }
 
-.modal-emails {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-  background: var(--bg-void);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-.modal-emails li {
-  padding: 0.6rem 1rem;
-  font-family: "Courier New", monospace;
-  color: var(--text-main);
-  border-bottom: 1px solid var(--border);
-}
-
-.modal-emails li:last-child {
-  border-bottom: none;
-}
-
-.modal-note {
-  font-size: 0.82rem;
-  opacity: 0.8;
-}
-
-.modal-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
-}
-
 .modal-btn {
-  flex: 1;
   text-align: center;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.85rem;
@@ -403,23 +370,6 @@ a {
 
 .modal-btn-primary:hover {
   background: var(--red-bright);
-}
-
-.modal-btn-secondary {
-  background: transparent;
-  color: var(--red-bright);
-}
-
-.modal-btn-secondary:hover {
-  background: var(--red-dim);
-  color: #fff;
-}
-
-.modal-copy-feedback {
-  min-height: 1.2em;
-  margin: 0.6rem 0 0;
-  font-size: 0.82rem;
-  color: var(--red-bright);
 }
 
 /* ---------- Apply form ---------- */
@@ -483,38 +433,11 @@ a {
   color: var(--red-bright);
 }
 
-.modal-alt {
-  margin-top: 1.5rem;
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
-}
-
-.modal-alt summary {
-  cursor: pointer;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-  font-family: "Trebuchet MS", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.modal-alt summary:hover {
-  color: var(--red-bright);
-}
-
-.modal-alt[open] summary {
-  color: var(--red-bright);
-}
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 600px) {
   .header-inner {
     flex-direction: column;
     text-align: center;
-  }
-
-  .modal-actions {
-    flex-direction: column;
   }
 }
