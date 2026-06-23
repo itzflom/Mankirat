@@ -273,17 +273,40 @@
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
     <button class="modal-close" type="button" id="modal-close" aria-label="Close">&times;</button>
     <h2 id="modal-title">Apply for <span id="modal-role">Role</span></h2>
-    <p>To formally submit your application to the Provisional Revolutionary Command, send an email stating the role you are applying for, along with your relevant skills, to <strong>both</strong> of the addresses below:</p>
-    <ul class="modal-emails">
-      <li>27singhk@bsj.sch.id</li>
-      <li>eshan030709@gmail.com</li>
-    </ul>
-    <p class="modal-note">Use whichever method is easiest for you — your device's mail app, webmail, or simply copying the addresses below.</p>
-    <div class="modal-actions">
-      <a class="modal-btn modal-btn-primary" id="modal-mailto" href="#" target="_blank" rel="noopener">Open Email Application</a>
-      <button class="modal-btn modal-btn-secondary" type="button" id="modal-copy">Copy Email Addresses</button>
-    </div>
-    <p class="modal-copy-feedback" id="modal-copy-feedback" role="status" aria-live="polite"></p>
+    <p>Submit your application below and it will be delivered directly to the Provisional Revolutionary Command.</p>
+
+    <form id="apply-form" novalidate>
+      <input type="hidden" name="role" id="form-role">
+      <input type="hidden" name="subject" id="form-subject">
+      <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
+
+      <label class="form-label" for="form-name">Full Name
+        <input class="form-input" type="text" id="form-name" name="name" required>
+      </label>
+      <label class="form-label" for="form-email">Your Email (so we can reply)
+        <input class="form-input" type="email" id="form-email" name="email" required>
+      </label>
+      <label class="form-label" for="form-message">Relevant Skills &amp; Why You're Qualified
+        <textarea class="form-input" id="form-message" name="message" rows="4" required></textarea>
+      </label>
+
+      <button class="modal-btn modal-btn-primary modal-btn-full" type="submit" id="form-submit-btn">Submit Application</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <details class="modal-alt">
+      <summary>Prefer to email directly instead?</summary>
+      <p>You can also apply by emailing <strong>both</strong> addresses below yourself:</p>
+      <ul class="modal-emails">
+        <li>27singhk@bsj.sch.id</li>
+        <li>eshan030709@gmail.com</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="modal-btn modal-btn-primary" id="modal-mailto" href="#" target="_blank" rel="noopener">Open Email Application</a>
+        <button class="modal-btn modal-btn-secondary" type="button" id="modal-copy">Copy Email Addresses</button>
+      </div>
+      <p class="modal-copy-feedback" id="modal-copy-feedback" role="status" aria-live="polite"></p>
+    </details>
   </div>
 </div>
 

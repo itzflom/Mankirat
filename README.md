@@ -27,10 +27,27 @@ Then visit `http://localhost:8000`.
 
 ## How applying works
 
-Each role's **Apply** button opens a popup with both organiser email addresses
-(`27singhk@bsj.sch.id` and `eshan030709@gmail.com`). From there you can either:
+Each role's **Apply** button opens a popup with a short application form (name, email, and
+relevant skills). Submitting it sends the application directly to the organisers' inboxes via
+[Web3Forms](https://web3forms.com) — no email client required on the applicant's end. A
+"Prefer to email directly instead?" section is also included as a manual fallback, offering
+both organiser addresses (`27singhk@bsj.sch.id` and `eshan030709@gmail.com`), a prefilled
+**Open Email Application** mailto link, and a **Copy Email Addresses** button.
 
-- Click **Open Email Application** to launch a prefilled email (subject + body) addressed to
-  both organisers, or
-- Click **Copy Email Addresses** to copy both addresses to your clipboard if you'd rather
-  compose the email yourself.
+### One-time setup: connecting the form to your inbox
+
+The direct-submission form is wired up with a [Web3Forms](https://web3forms.com) access key in
+`script.js`, so submissions are delivered straight to an inbox without any backend code.
+
+By default, a Web3Forms access key only delivers to the single email address it was created
+with. To make sure applications reach **both** `27singhk@bsj.sch.id` and
+`eshan030709@gmail.com`:
+
+1. Log into the [Web3Forms dashboard](https://web3forms.com/login) (passwordless magic-link
+   login, using whichever email the access key was created with).
+2. Open the form associated with this access key.
+3. Add the second address as an **Additional Email** / CC recipient on that form.
+
+If this step isn't done, submissions will only land in the one inbox the key was created for —
+applicants can still use the "Prefer to email directly instead?" fallback to reach both
+addresses manually in the meantime.
